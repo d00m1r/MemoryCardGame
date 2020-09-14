@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  EmojiMemoryGameContentView.swift
 //  Memory Game
 //
 //  Created by Damasya on 9/9/20.
@@ -8,27 +8,24 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @ObservedObject var viewModel: EmojiMemoryGame
+struct EmojiMemoryGameContentView: View {
+    @ObservedObject var viewModel: EmojiMemoryGameViewModel
     
     var body: some View {
-        HStack {
-            ForEach(viewModel.cards) { card in
+        Grid(items: viewModel.cards) { card in
                 CardView(card: card).onTapGesture{
                     self.viewModel.choose(card: card)
                 }
-                .aspectRatio(2/3, contentMode: .fit)
+            //.aspectRatio(3/3, contentMode: .fit)
+            .padding()
             }
-        }
         .padding()
         .foregroundColor(Color.orange)
-        //.font(Font.largeTitle)
-        //.scaledToFit()
+        }
     }
-}
 
 struct CardView: View {
-    var card: MemoryGame<String>.Card
+    var card: MemoryGameModel<String>.Card
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -50,6 +47,6 @@ struct CardView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewModel: EmojiMemoryGame())
+        EmojiMemoryGameContentView(viewModel: EmojiMemoryGameViewModel())
     }
 }

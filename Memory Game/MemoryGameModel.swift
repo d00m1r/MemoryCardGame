@@ -1,5 +1,5 @@
 //
-//  MemoryGame.swift
+//  MemoryGameModel.swift
 //  Memory Game
 //
 //  Created by Damasya on 9/9/20.
@@ -8,21 +8,12 @@
 //Model
 import Foundation
 
-struct MemoryGame <CardContent> {
+struct MemoryGameModel <CardContent> {
     var cards : Array<Card>
     
     mutating func choose(card:Card) {
-        let choosenIndex: Int = index(of: card)
+        let choosenIndex: Int = cards.firstIndex(of: card)!
         self.cards[choosenIndex].isFaceUp = !self.cards[choosenIndex].isFaceUp
-    }
-    
-    func index(of card: Card) -> Int {
-        for index in 0..<cards.count{
-            if self.cards[index].id == card.id{
-                return index
-            }
-        }
-        return 0 // TODO: return value
     }
     
     init (numberOfGroupsOfCards: Int, numberOfCardsInGroup: Int = 2,
