@@ -13,9 +13,10 @@ class EmojiMemoryGameViewModel: ObservableObject {
                                EmojiMemoryGameViewModel.createMemoryGame()
     
     static func createMemoryGame()-> MemoryGameModel<String> {
-        let emojis  = ["🦊","🐰","🐻"]
-        return MemoryGameModel<String>(numberOfGroupsOfCards: emojis.count)
-               { groupIndex in return emojis[groupIndex] }
+        let emojis: [[String]] = [animalsEmojis, facesEmojis, fruitsEmojis, flagsEmojis]
+        let randomThemeIndex = Int.random(in: 0..<emojis.count)
+        return MemoryGameModel<String>(numberOfGroupsOfCards: emojis[randomThemeIndex].count)
+               { groupIndex in return emojis[randomThemeIndex][groupIndex] }
     }
     
     // MARK: - Access to the Model
@@ -30,4 +31,8 @@ class EmojiMemoryGameViewModel: ObservableObject {
         //objectWillChange.send()
         model.choose(card: card)
     }
+    static let animalsEmojis  = ["🦊","🐰","🐻","🐵","🐷","🦁","🐭","🐶"]
+    static let facesEmojis = ["😆","😂","😇","😚","😋","😎","🤪","🥺"]
+    static let fruitsEmojis = ["🍎","🍊","🍌","🍉","🥝","🍑","🥭","🍐"]
+    static let flagsEmojis = ["🇬🇧","🇮🇹","🇷🇺","🇺🇦","🇰🇿","🇯🇵","🇩🇪","🇰🇷"]
 }
