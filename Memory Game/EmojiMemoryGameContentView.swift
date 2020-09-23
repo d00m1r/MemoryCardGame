@@ -12,16 +12,35 @@ struct EmojiMemoryGameContentView: View {
     @ObservedObject var viewModel: EmojiMemoryGameViewModel
     
     var body: some View {
-        Grid(items: viewModel.cards) { card in
+        VStack(alignment: .center){
+            Text("Score: \(viewModel.score)")
+                .foregroundColor(Color.gray)
+                .font(.title)
+            Grid(items: viewModel.cards) { card in
                 CardView(card: card).onTapGesture{
                     self.viewModel.choose(card: card)
                 }
-            .padding(3)
+                .padding(self.gridPaddingLength)
             }
-        .padding(5)
-        .foregroundColor(Color.orange)
+            .padding(.horizontal, paddingLength)
+            .foregroundColor(Color("middleBlue"))
+            Button(action: {
+                self.viewModel.resetGame()
+            }) {
+                Text("New game")
+                    .padding(TextPaddingLength)
+                    .foregroundColor(Color.white)
+                    .background(LinearGradient(gradient: Gradient(colors: [Color("LightBlue"), Color("LightPink")]), startPoint: .leading, endPoint: .trailing))
+                    .font(.title)
+                    .cornerRadius(10)
+            }.padding(.bottom)
         }
+        .padding(.horizontal, paddingLength)
     }
+    var paddingLength : CGFloat = 5.0
+    var TextPaddingLength : CGFloat = 15.0
+    var gridPaddingLength : CGFloat = 3.0
+}
 
 struct CardView: View {
     var card: MemoryGameModel<String>.Card
@@ -29,7 +48,7 @@ struct CardView: View {
         GeometryReader { geometry in
             ZStack {
                 if self.card.isFaceUp {
-                    RoundedRectangle(cornerRadius: self.cornerRadius).fill(Color.white)
+                    RoundedRectangle(cornerRadius: self.cornerRadius).fill(LinearGradient(gradient: Gradient(colors: [Color("LightBlue"), Color("LightPink")]), startPoint: .leading, endPoint: .trailing))
                     RoundedRectangle(cornerRadius: self.cornerRadius).stroke(lineWidth: self.lineWidth)
                     Text(self.card.content)
                 } else {

@@ -8,8 +8,16 @@
 //Model
 import Foundation
 
+//class DeallocPrinter {
+//    deinit {
+//        print("deallocated")
+//    }
+//}
+
 struct MemoryGameModel <CardContent> where CardContent: Equatable {
+    //    let printer = DeallocPrinter()
     var cards : Array<Card>
+    var score = 0 // +10 if cards matched, -5 if dismatched
     var indexOneAndOnlyFaceUpCard: Int? {
         get { cards.indices.filter { (index) -> Bool in cards[index].isFaceUp}.only }
         set {
@@ -25,14 +33,16 @@ struct MemoryGameModel <CardContent> where CardContent: Equatable {
                 if cards[choosenIndex].content == cards[potentialMatchIndex].content{
                     cards[choosenIndex].isMatched = true
                     cards[potentialMatchIndex].isMatched = true
+                    score += 10
                 }
+                else { score -= 5 }
                 self.cards[choosenIndex].isFaceUp = true
             } else { indexOneAndOnlyFaceUpCard = choosenIndex }
         }
     }
     
     init (numberOfGroupsOfCards: Int, numberOfCardsInGroup: Int = 2,
-           cardContentFactory: (Int) -> CardContent) {
+          cardContentFactory: (Int) -> CardContent) {
         cards = Array<Card>()
         for groupIndex in 0..<numberOfGroupsOfCards {
             let content = cardContentFactory(groupIndex)
@@ -41,7 +51,9 @@ struct MemoryGameModel <CardContent> where CardContent: Equatable {
             }
         }
         cards.shuffle()
+        //        print("struct init")
     }
+    
     
     struct Card: Identifiable {
         var isFaceUp: Bool = false
