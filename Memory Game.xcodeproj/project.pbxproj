@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2241C12D252495CE008B043A /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2241C12C252495CE008B043A /* Cardify.swift */; };
 		226DDB302508E3F90007B07B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DDB2F2508E3F90007B07B /* AppDelegate.swift */; };
 		226DDB322508E3F90007B07B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DDB312508E3F90007B07B /* SceneDelegate.swift */; };
 		226DDB342508E3F90007B07B /* EmojiMemoryGameContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DDB332508E3F90007B07B /* EmojiMemoryGameContentView.swift */; };
@@ -17,10 +18,10 @@
 		226DDB522508E3FB0007B07B /* Memory_GameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DDB512508E3FB0007B07B /* Memory_GameUITests.swift */; };
 		226DDB602508E5180007B07B /* EmojiMemoryGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DDB5F2508E5180007B07B /* EmojiMemoryGameViewModel.swift */; };
 		226DDB622508E53F0007B07B /* MemoryGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DDB612508E53F0007B07B /* MemoryGameModel.swift */; };
-		229A4E9B250FAD3800406A7F /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4E9A250FAD3700406A7F /* GridLayout.swift */; };
 		229A4E9D250FC76500406A7F /* Array + index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4E9C250FC76500406A7F /* Array + index.swift */; };
 		229A4E9F250FCD2100406A7F /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229A4E9E250FCD2100406A7F /* Grid.swift */; };
 		229B36012511104F008618B4 /* Array + only.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229B36002511104F008618B4 /* Array + only.swift */; };
+		22A67E3025213724003AA137 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A67E2F25213724003AA137 /* GridLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2241C12C252495CE008B043A /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = SOURCE_ROOT; };
 		226DDB2C2508E3F90007B07B /* Memory Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memory Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		226DDB2F2508E3F90007B07B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		226DDB312508E3F90007B07B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,10 +59,10 @@
 		226DDB532508E3FB0007B07B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		226DDB5F2508E5180007B07B /* EmojiMemoryGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGameViewModel.swift; sourceTree = "<group>"; };
 		226DDB612508E53F0007B07B /* MemoryGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGameModel.swift; sourceTree = "<group>"; };
-		229A4E9A250FAD3700406A7F /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GridLayout.swift; path = ../../../Downloads/GridLayout.swift; sourceTree = "<group>"; };
 		229A4E9C250FC76500406A7F /* Array + index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + index.swift"; sourceTree = "<group>"; };
 		229A4E9E250FCD2100406A7F /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		229B36002511104F008618B4 /* Array + only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array + only.swift"; sourceTree = "<group>"; };
+		22A67E2F25213724003AA137 /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +117,12 @@
 				226DDB312508E3F90007B07B /* SceneDelegate.swift */,
 				226DDB352508E3FB0007B07B /* Assets.xcassets */,
 				226DDB3A2508E3FB0007B07B /* LaunchScreen.storyboard */,
-				229A4E9A250FAD3700406A7F /* GridLayout.swift */,
+				22A67E2F25213724003AA137 /* GridLayout.swift */,
 				229A4E9E250FCD2100406A7F /* Grid.swift */,
 				226DDB612508E53F0007B07B /* MemoryGameModel.swift */,
 				226DDB5F2508E5180007B07B /* EmojiMemoryGameViewModel.swift */,
 				226DDB332508E3F90007B07B /* EmojiMemoryGameContentView.swift */,
+				2241C12C252495CE008B043A /* Cardify.swift */,
 				229B36002511104F008618B4 /* Array + only.swift */,
 				229A4E9C250FC76500406A7F /* Array + index.swift */,
 				226DDB3D2508E3FB0007B07B /* Info.plist */,
@@ -217,7 +220,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Damir Miniakhmetov";
 				TargetAttributes = {
 					226DDB2B2508E3F90007B07B = {
@@ -289,10 +292,11 @@
 				226DDB302508E3F90007B07B /* AppDelegate.swift in Sources */,
 				226DDB322508E3F90007B07B /* SceneDelegate.swift in Sources */,
 				229A4E9F250FCD2100406A7F /* Grid.swift in Sources */,
+				2241C12D252495CE008B043A /* Cardify.swift in Sources */,
 				226DDB622508E53F0007B07B /* MemoryGameModel.swift in Sources */,
 				226DDB342508E3F90007B07B /* EmojiMemoryGameContentView.swift in Sources */,
 				226DDB602508E5180007B07B /* EmojiMemoryGameViewModel.swift in Sources */,
-				229A4E9B250FAD3800406A7F /* GridLayout.swift in Sources */,
+				22A67E3025213724003AA137 /* GridLayout.swift in Sources */,
 				229B36012511104F008618B4 /* Array + only.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +370,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -426,6 +431,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

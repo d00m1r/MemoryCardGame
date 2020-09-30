@@ -12,7 +12,7 @@ class EmojiMemoryGameViewModel: ObservableObject {
     @Published private var model: MemoryGameModel<String> =
         EmojiMemoryGameViewModel.createMemoryGame()
     
-    static func createMemoryGame()-> MemoryGameModel<String> {
+    private static func createMemoryGame()-> MemoryGameModel<String> {
         let emojis: [[String]] = [animalsEmojis, facesEmojis, fruitsEmojis, flagsEmojis]
         let randomThemeIndex = Int.random(in: 0..<emojis.count)
         return MemoryGameModel<String>(numberOfGroupsOfCards: emojis[randomThemeIndex].count)
@@ -40,8 +40,8 @@ class EmojiMemoryGameViewModel: ObservableObject {
         model = EmojiMemoryGameViewModel.createMemoryGame()
     }
     
-    static let animalsEmojis  = ["🦊","🐰","🐻","🐵","🐷","🦁","🐭","🐶"]
-    static let facesEmojis = ["😆","😂","😇","😚","😋","😎","🤪","🥺"]
-    static let fruitsEmojis = ["🍎","🍊","🍌","🍉","🥝","🍑","🥭","🍐"]
-    static let flagsEmojis = ["🇬🇧","🇮🇹","🇷🇺","🇺🇦","🇰🇿","🇯🇵","🇩🇪","🇰🇷"]
+    private static let animalsEmojis  = ["🦊","🐰","🐻","🐵","🐷","🦁","🐭","🐶"]
+    private static let facesEmojis = ["😆","😂","😇","😚","😋","😎","🤪","🥺"]
+    private static let fruitsEmojis = ["🍎","🍊","🍌","🍉","🥝","🍑","🥭","🍐"]
+    private static let flagsEmojis = ["🇬🇧","🇮🇹","🇷🇺","🇺🇦","🇰🇿","🇯🇵","🇩🇪","🇰🇷"]
 }

@@ -16,9 +16,11 @@ import Foundation
 
 struct MemoryGameModel <CardContent> where CardContent: Equatable {
     //    let printer = DeallocPrinter()
-    var cards : Array<Card>
-    var score = 0 // +10 if cards matched, -5 if dismatched
-    var indexOneAndOnlyFaceUpCard: Int? {
+    private(set) var cards : Array<Card> //anybody can't modify but can read
+    private(set) var score = 0 // +10 if cards matched, -5 if dismatched
+    private let cardsMatched = 10
+    private let cardsDismatched = 5
+    private var indexOneAndOnlyFaceUpCard: Int? {
         get { cards.indices.filter { (index) -> Bool in cards[index].isFaceUp}.only }
         set {
             for index in cards.indices {
@@ -33,9 +35,9 @@ struct MemoryGameModel <CardContent> where CardContent: Equatable {
                 if cards[choosenIndex].content == cards[potentialMatchIndex].content{
                     cards[choosenIndex].isMatched = true
                     cards[potentialMatchIndex].isMatched = true
-                    score += 10
+                    score += cardsMatched
                 }
-                else { score -= 5 }
+                else { score -= cardsDismatched }
                 self.cards[choosenIndex].isFaceUp = true
             } else { indexOneAndOnlyFaceUpCard = choosenIndex }
         }
