@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2241C12D252495CE008B043A /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2241C12C252495CE008B043A /* Cardify.swift */; };
+		2252FE3B25349EB20053C816 /*  PacmanFigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2252FE3A25349EB20053C816 /*  PacmanFigure.swift */; };
 		226DDB302508E3F90007B07B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DDB2F2508E3F90007B07B /* AppDelegate.swift */; };
 		226DDB322508E3F90007B07B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DDB312508E3F90007B07B /* SceneDelegate.swift */; };
 		226DDB342508E3F90007B07B /* EmojiMemoryGameContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226DDB332508E3F90007B07B /* EmojiMemoryGameContentView.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		2241C12C252495CE008B043A /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = SOURCE_ROOT; };
+		2252FE3A25349EB20053C816 /*  PacmanFigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " PacmanFigure.swift"; sourceTree = SOURCE_ROOT; };
 		226DDB2C2508E3F90007B07B /* Memory Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memory Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		226DDB2F2508E3F90007B07B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		226DDB312508E3F90007B07B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				2241C12C252495CE008B043A /* Cardify.swift */,
 				229B36002511104F008618B4 /* Array + only.swift */,
 				229A4E9C250FC76500406A7F /* Array + index.swift */,
+				2252FE3A25349EB20053C816 /*  PacmanFigure.swift */,
 				226DDB3D2508E3FB0007B07B /* Info.plist */,
 				226DDB372508E3FB0007B07B /* Preview Content */,
 			);
@@ -291,6 +294,7 @@
 				229A4E9D250FC76500406A7F /* Array + index.swift in Sources */,
 				226DDB302508E3F90007B07B /* AppDelegate.swift in Sources */,
 				226DDB322508E3F90007B07B /* SceneDelegate.swift in Sources */,
+				2252FE3B25349EB20053C816 /*  PacmanFigure.swift in Sources */,
 				229A4E9F250FCD2100406A7F /* Grid.swift in Sources */,
 				2241C12D252495CE008B043A /* Cardify.swift in Sources */,
 				226DDB622508E53F0007B07B /* MemoryGameModel.swift in Sources */,

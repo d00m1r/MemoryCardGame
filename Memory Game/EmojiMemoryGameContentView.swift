@@ -25,7 +25,9 @@ struct EmojiMemoryGameContentView: View {
             .padding(.horizontal, paddingLength)
             .foregroundColor(Color("middleBlue"))
             Button(action: {
-                self.viewModel.resetGame()
+                withAnimation(Animation.easeIn(duration: 0.35)){
+                    self.viewModel.resetGame()
+                }
             }) {
                 Text("New game")
                     .padding(TextPaddingLength)
@@ -37,9 +39,9 @@ struct EmojiMemoryGameContentView: View {
         }
         .padding(.horizontal, paddingLength)
     }
-    var paddingLength : CGFloat = 5.0
-    var TextPaddingLength : CGFloat = 15.0
-    var gridPaddingLength : CGFloat = 3.0
+    let paddingLength : CGFloat = 5.0
+    let TextPaddingLength : CGFloat = 15.0
+    let gridPaddingLength : CGFloat = 3.0
 }
 
 struct CardView: View {
@@ -54,13 +56,16 @@ struct CardView: View {
     private func body (in size: CGSize) -> some View {
         if  card.isFaceUp || !card.isMatched{
             ZStack {
+                PacmanFigure(startAngle:Angle.degrees(270), endAngle: Angle.degrees(0-30), clockwise: true).foregroundColor(.white).opacity(circleOpacity).padding(circlePadding)
                 Text(self.card.content)
                     .font(Font.system(size: min(size.width, size.height) * self.fontScale))
             }
             .cardify(isFaceUp: self.card.isFaceUp)
         }
     }
-    var fontScale: CGFloat = 0.75
+    let circleOpacity: Double = 0.5
+    let fontScale: CGFloat = 0.6
+    let circlePadding: CGFloat = 6
 }
 
 struct ContentView_Previews: PreviewProvider {
