@@ -20,12 +20,13 @@ struct EmojiMemoryGameContentView: View {
                 CardView(card: card).onTapGesture{
                     self.viewModel.choose(card: card)
                 }
+                .animation(Animation.linear(duration: animationDuration))
                 .padding(self.gridPaddingLength)
             }
             .padding(.horizontal, paddingLength)
             .foregroundColor(Color("middleBlue"))
             Button(action: {
-                withAnimation(Animation.easeIn(duration: 0.35)){
+                withAnimation(Animation.easeIn(duration: buttonAnimationDuration)){
                     self.viewModel.resetGame()
                 }
             }) {
@@ -39,6 +40,8 @@ struct EmojiMemoryGameContentView: View {
         }
         .padding(.horizontal, paddingLength)
     }
+    let animationDuration = 0.5
+    let buttonAnimationDuration = 0.35
     let paddingLength : CGFloat = 5.0
     let TextPaddingLength : CGFloat = 15.0
     let gridPaddingLength : CGFloat = 3.0
@@ -58,9 +61,12 @@ struct CardView: View {
             ZStack {
                 PacmanFigure(startAngle:Angle.degrees(270), endAngle: Angle.degrees(0-30), clockwise: true).foregroundColor(.white).opacity(circleOpacity).padding(circlePadding)
                 Text(self.card.content)
+                    .rotationEffect(Angle.degrees(card.isMatched ? 360 :0))
+                    .animation(card.isMatched ? Animation.linear(duration: 1).repeatForever(autoreverses: false) : .default)
                     .font(Font.system(size: min(size.width, size.height) * self.fontScale))
             }
             .cardify(isFaceUp: self.card.isFaceUp)
+            .transition(.scale)
         }
     }
     let circleOpacity: Double = 0.5
