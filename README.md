@@ -4,5 +4,4 @@
 
 <img src="https://raw.githubusercontent.com/d00m1r/MemoryCardGame/main/MemoryCardGame.gif" width="400" height="740" />
 
-![Alt Text](https://raw.githubusercontent.com/d00m1r/MemoryCardGame/main/MemoryCardGame.gif)
 
